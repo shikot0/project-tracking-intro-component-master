@@ -3,7 +3,8 @@
     margin: 0;
 }
 body {
-    height: 100vh;   
+    height: 100vh;  
+    overflow-x: hidden;  
 }
 #blue-background {
     position: absolute; 
@@ -14,6 +15,12 @@ body {
     background: hsl(207, 33%, 95%);
     border-radius: 0 0 0 100px; 
     z-index: -10; 
+    animation: slide-in .5s linear .3s 1 backwards;   
+}
+@keyframes slide-in {
+    from { 
+        transform: translateY(-200%); 
+    }
 }
 header {
     display: flex; 
@@ -142,8 +149,14 @@ main {
     height: 100%; 
     width: 50%;  
     background-repeat: no-repeat;            
-    background-position: right -375px center;       
+    background-position: right -375px center;     
+    animation: fade-in .5s linear 1 forwards;     
 } 
+@keyframes fade-in {
+    from {
+        transform: translateX(100%) 
+    }
+}
 @media screen and (max-width: 1080px) {
     #image-section {
         background: url(images/illustration-devices.svg);
@@ -187,6 +200,7 @@ main {
         opacity: 0;
         transform: translateY(-1000px);
         transition: .2s;
+        z-index: 10; 
     }
     nav.visible {
         transform: none;
