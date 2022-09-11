@@ -6,7 +6,6 @@
     margin: 0;
 }
 body {
-    height: 100vh;  
     overflow-x: hidden;  
 }
 #blue-background {
@@ -74,7 +73,7 @@ nav {
     display: none;
 }
 main {
-    height: 83%;   
+    height: 85%;    
     display: flex; 
     align-items: center;   
 } 
@@ -230,7 +229,7 @@ main {
     main {
         flex-direction: column-reverse;  
         justify-content: space-between;
-        height: 93vh;    
+        height: 95vh;     
     }
     #text-section {
         padding: 0 6% 0;
